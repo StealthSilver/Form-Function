@@ -125,15 +125,23 @@ export function Projects() {
                   </h3>
                   <p className="text-gray-600">{project.category}</p>
                 </div>
-                <motion.div
-                  animate={{ rotate: [0, 10, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  tabIndex={-1}
+                  aria-label={`Visit ${project.title} site`}
                 >
-                  <ArrowUpRight
-                    size={24}
-                    className="text-gray-400 group-hover:text-gray-900 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
-                  />
-                </motion.div>
+                  <motion.div
+                    animate={{ rotate: [0, 10, 0] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  >
+                    <ArrowUpRight
+                      size={24}
+                      className="text-gray-400 group-hover:text-gray-900 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
+                    />
+                  </motion.div>
+                </a>
               </div>
             </motion.div>
           ))}

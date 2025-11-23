@@ -39,7 +39,7 @@ export function Navbar() {
               <img
                 src="/logo.svg"
                 alt="Form & Function Logo"
-                className="h-10 w-auto"
+                className="h-8 w-auto md:h-10"
                 style={{ display: "block" }}
               />
             </a>
