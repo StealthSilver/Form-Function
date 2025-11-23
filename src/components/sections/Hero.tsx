@@ -15,8 +15,37 @@ export function Hero() {
   return (
     <section
       ref={ref}
-      className="pt-32 pb-20 px-6 lg:px-8 bg-white relative overflow-hidden"
+      className="pt-40 pb-20 px-6 lg:px-8 bg-white relative overflow-hidden"
     >
+      {/* ⭐ UPDATED — Silver UI Promo Button (moved below navbar) */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="absolute top-24 left-1/2 -translate-x-1/2 z-20 w-full flex justify-center px-2 sm:px-0"
+      >
+        <a
+          href="https://silver-ui.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full max-w-xs sm:max-w-fit"
+        >
+          <motion.div
+            className="w-full sm:w-auto px-4 sm:px-6 py-2 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white rounded-full shadow-lg flex items-center justify-center gap-2 hover:from-gray-800 hover:to-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-200 text-sm sm:text-base"
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 8px 30px rgba(0,0,0,0.2)",
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="font-semibold tracking-wide">
+              Introducing Silver UI
+            </span>
+            <ArrowRight size={18} className="opacity-80" />
+          </motion.div>
+        </a>
+      </motion.div>
+
       {/* Animated background elements */}
       <motion.div
         className="absolute top-20 right-10 w-72 h-72 bg-gray-100 rounded-full blur-3xl"
