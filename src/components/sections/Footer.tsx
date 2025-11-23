@@ -54,7 +54,7 @@ export function Footer() {
               <img
                 src="/logo.svg"
                 alt="Form & Function Logo"
-                className="h-10 w-auto"
+                className="h-8 w-auto md:h-10"
               />
             </motion.h3>
             <p className="text-gray-600 mb-6 max-w-sm">
@@ -79,7 +79,6 @@ export function Footer() {
                   }}
                   whileHover={{
                     scale: 1.15,
-
                     transition: { duration: 0.5 },
                   }}
                   whileTap={{ scale: 0.9 }}
