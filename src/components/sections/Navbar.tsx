@@ -35,8 +35,13 @@ export function Navbar() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            <a href="#" className="text-2xl tracking-tight text-gray-900">
-              Form & Function
+            <a href="#" className="flex items-center">
+              <img
+                src="/logo.svg"
+                alt="Form & Function Logo"
+                className="h-10 w-auto"
+                style={{ display: "block" }}
+              />
             </a>
           </motion.div>
 
