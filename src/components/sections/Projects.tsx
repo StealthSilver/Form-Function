@@ -72,7 +72,8 @@ export function Projects() {
               whileHover={{ scale: 1.02 }}
             >
               <motion.div
-                className="relative aspect-4/3 bg-gray-100 overflow-hidden mb-6"
+                className="relative w-full aspect-video bg-gray-100 overflow-hidden mb-6 flex items-center justify-center"
+                style={{ minHeight: 0, minWidth: 0 }}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.4 }}
               >
@@ -80,11 +81,19 @@ export function Projects() {
                   initial={{ scale: 1.2 }}
                   animate={isInView ? { scale: 1 } : { scale: 1.2 }}
                   transition={{ duration: 0.8, delay: index * 0.15 }}
+                  className="w-full h-full"
                 >
                   <ImageWithFallback
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain object-center"
+                    style={{
+                      aspectRatio: "16/9",
+                      width: "100%",
+                      height: "100%",
+                      display: "block",
+                      background: "#f3f4f6",
+                    }}
                   />
                 </motion.div>
                 <motion.div
@@ -92,14 +101,21 @@ export function Projects() {
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
                 >
-                  <motion.div
-                    initial={{ scale: 0, rotate: -180 }}
-                    whileHover={{ scale: 1, rotate: 0 }}
-                    transition={{ type: "spring", stiffness: 200 }}
-                    className="w-16 h-16 bg-white rounded-full flex items-center justify-center"
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabIndex={-1}
                   >
-                    <ArrowUpRight className="text-gray-900" size={28} />
-                  </motion.div>
+                    <motion.div
+                      initial={{ scale: 0, rotate: -180 }}
+                      whileHover={{ scale: 1, rotate: 0 }}
+                      transition={{ type: "spring", stiffness: 200 }}
+                      className="w-16 h-16 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors"
+                    >
+                      <ArrowUpRight className="text-gray-900" size={28} />
+                    </motion.div>
+                  </a>
                 </motion.div>
               </motion.div>
               <div className="flex items-center justify-between">
