@@ -67,7 +67,7 @@ export function Footer() {
                   key={index}
                   href={social.href}
                   className="w-10 h-10 bg-gray-900 text-white flex items-center justify-center hover:bg-gray-800 transition-colors"
-                  initial={{ scale: 0, rotate: -180 }}
+                  initial={{ scale: 0 }}
                   animate={
                     isInView
                       ? { scale: 1, rotate: 0 }
