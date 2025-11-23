@@ -39,8 +39,8 @@ export function Navbar() {
               <img
                 src="/logo.svg"
                 alt="Form & Function Logo"
-                className="h-10 w-auto"
-                style={{ display: "block" }}
+                className="h-8 w-auto sm:h-10 md:h-12 lg:h-10 transition-all duration-200"
+                style={{ display: "block", maxWidth: "160px", height: "auto" }}
               />
             </a>
           </motion.div>
@@ -111,8 +111,8 @@ export function Navbar() {
               ))}
               <motion.button
                 className="w-full mt-4 px-6 py-2.5 bg-gray-900 text-white hover:bg-gray-800 transition-colors"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
                 Get Started
