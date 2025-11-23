@@ -1,4 +1,5 @@
-import { Star } from "lucide-react";
+"use client";
+import StarIcon from "@mui/icons-material/Star";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -121,7 +122,10 @@ export function Testimonials() {
                       stiffness: 200,
                     }}
                   >
-                    <Star size={20} className="fill-gray-900 text-gray-900" />
+                    <StarIcon
+                      style={{ fontSize: 20 }}
+                      className="fill-gray-900 text-gray-900"
+                    />
                   </motion.div>
                 ))}
               </motion.div>
