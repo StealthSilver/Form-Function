@@ -2,7 +2,7 @@ import { ImageWithFallback } from "../ui/ImageWithFallback";
 import { ArrowUpRight } from "lucide-react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { projects } from "./projects.config";
+import { projects } from "../../config/projects.config";
 
 export function Projects() {
   const ref = useRef(null);
