@@ -47,11 +47,15 @@ export function Footer() {
             transition={{ duration: 0.6 }}
           >
             <motion.h3
-              className="text-2xl tracking-tight text-gray-900 mb-4"
-              whileHover={{ scale: 1.05 }}
+              className="mb-4"
+              whileHover={{ scale: 1.0 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              Form & Function
+              <img
+                src="/logo.svg"
+                alt="Form & Function Logo"
+                className="h-10 w-auto"
+              />
             </motion.h3>
             <p className="text-gray-600 mb-6 max-w-sm">
               A design studio dedicated to creating meaningful experiences
@@ -77,7 +81,7 @@ export function Footer() {
                   }}
                   whileHover={{
                     scale: 1.15,
-                    rotate: 360,
+
                     transition: { duration: 0.5 },
                   }}
                   whileTap={{ scale: 0.9 }}
@@ -113,7 +117,6 @@ export function Footer() {
                     <motion.a
                       href="#"
                       className="text-gray-600 hover:text-gray-900 transition-colors inline-block relative group"
-                      whileHover={{ x: 5 }}
                     >
                       {link}
                       <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-900 group-hover:w-full transition-all duration-300" />

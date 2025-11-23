@@ -119,7 +119,10 @@ export function Hero() {
             </motion.button>
             <motion.button
               className="px-8 py-4 border border-gray-900 text-gray-900 hover:bg-gray-50 transition-colors duration-200"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 10px 40px rgba(0,0,0,0.2)",
+              }}
               whileTap={{ scale: 0.95 }}
             >
               View Our Work
@@ -150,7 +153,6 @@ export function Hero() {
                 type: "spring",
                 stiffness: 100,
               }}
-              whileHover={{ scale: 1.1, y: -5 }}
             >
               <div className="text-4xl text-gray-900 mb-2">{stat.value}</div>
               <div className="text-gray-600">{stat.label}</div>

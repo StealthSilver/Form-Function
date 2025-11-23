@@ -32,15 +32,15 @@ export function Navbar() {
           {/* Logo */}
           <motion.div
             className="flex-shrink-0"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.0 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
             <a href="#" className="flex items-center">
               <img
                 src="/logo.svg"
                 alt="Form & Function Logo"
-                className="h-8 w-auto sm:h-10 md:h-12 lg:h-10 transition-all duration-200"
-                style={{ display: "block", maxWidth: "160px", height: "auto" }}
+                className="h-10 w-auto"
+                style={{ display: "block" }}
               />
             </a>
           </motion.div>
@@ -62,7 +62,10 @@ export function Navbar() {
             ))}
             <motion.button
               className="px-6 py-2.5 bg-gray-900 text-white hover:bg-gray-800 transition-colors duration-200"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 10px 40px rgba(0,0,0,0.2)",
+              }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -102,18 +105,20 @@ export function Navbar() {
                   href={`#${link.toLowerCase()}`}
                   className="block py-2 text-gray-600 hover:text-gray-900 transition-colors"
                   onClick={() => setIsOpen(false)}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
                 >
                   {link}
                 </motion.a>
               ))}
               <motion.button
-                className="w-full mt-4 px-6 py-2.5 bg-gray-900 text-white hover:bg-gray-800 transition-colors"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
+                className="px-8 py-4 bg-gray-900 text-white hover:bg-gray-800 transition-colors duration-200 flex items-center justify-center gap-2 group"
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 10px 40px rgba(0,0,0,0.2)",
+                }}
+                whileTap={{ scale: 0.95 }}
               >
                 Get Started
               </motion.button>

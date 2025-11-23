@@ -84,7 +84,6 @@ export function Services() {
 
               <motion.div
                 className="w-14 h-14 bg-gray-900 text-white flex items-center justify-center mb-6 group-hover:bg-gray-800 transition-colors relative z-10"
-                whileHover={{ rotate: 360, scale: 1.1 }}
                 transition={{ duration: 0.6 }}
               >
                 <service.icon size={28} />
